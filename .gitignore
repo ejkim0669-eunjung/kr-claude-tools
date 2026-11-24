@@ -1,0 +1,27 @@
+# 인증키 파일
+law_oc.txt
+owner.txt
+*.key
+*.token
+
+# 민감한 설정
+.claude/
+chrome-profile/
+masked_output/
+
+# Python 캐시
+__pycache__/
+*.pyc
+*.pyo
+
+# 로그 및 임시 파일
+*.log
+done_*.txt
+run.log
+
+# 스크린샷 (용량 절약)
+screenshots/
+
+# Windows
+Thumbs.db
+desktop.ini
