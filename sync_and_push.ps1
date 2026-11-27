@@ -33,7 +33,7 @@ if ($status) {
     $date = Get-Date -Format "yyyy-MM-dd HH:mm"
     git add .
     git commit -m "자동 백업 $date"
-    git push origin main
+    git push origin master
     Write-Host "[$date] push 완료"
 } else {
     Write-Host "[$(Get-Date -Format 'HH:mm')] 변경 없음"
