@@ -2163,7 +2163,10 @@ def _click_menu_item(page, frame, screen):
     if not frame.evaluate(_MENU_OVERLAY_JS):
         cats = frame.evaluate(_TOP_NAV_CATEGORY_JS)
         if len(cats) == 1:
-            frame.evaluate("(id) => { const el = document.getElementById(id); if(el) { el.dispatchEvent(new MouseEvent('mouseover',{bubbles:true})); el.dispatchEvent(new MouseEvent('mouseenter',{bubbles:true})); } }", cats[0])
+            # JS dispatchEvent(mouseover)는 웹스퀘어가 무시한다 — native mouse.move 로 hover해야 드롭다운이 열린다 (2026-11-28 확인)
+            pos = frame.evaluate("(id) => { const el=document.getElementById(id); if(!el) return null; const r=el.getBoundingClientRect(); return {x:r.left+r.width/2, y:r.top+r.height/2}; }", cats[0])
+            if pos:
+                page.mouse.move(pos["x"], pos["y"])
             time.sleep(1.5)
         else:
             navs = frame.evaluate(_TOP_NAV_HOMEPAGE_JS)

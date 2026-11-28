@@ -1,0 +1,20 @@
+{
+  "_설명1": "2027-01-15 자동 실행용 설정 스냅샷. 2026년 2기 확정신고 기간 고정. 편집 금지.",
+  "_설명2": "run_2027-01-15.bat 에서 --redo 로 실행 → 87개 거래처 전부 재조회.",
+
+  "list": "C:\\Users\\admin\\Desktop\\2. 거래처 인수인계\\김은정 부가세신고 거래처.xlsx",
+  "tonghap_year": "2026",
+  "tonghap_ki": "2기",
+  "tonghap_rtn": "확정",
+  "card_year": "2026",
+  "card_from_q": "3분기",
+  "card_to_q": "4분기",
+  "cash_year": "2026",
+  "cash_quarter": "전체",
+  "export_year": "2026",
+  "export_type": "반기",
+  "export_value": "하반기",
+  "folder_name": "name",
+  "launch_chrome": true,
+  "wait_minutes": 120
+}
